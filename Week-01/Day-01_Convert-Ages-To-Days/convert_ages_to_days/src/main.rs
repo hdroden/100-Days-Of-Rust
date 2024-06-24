@@ -1,27 +1,13 @@
 use std::io;
 
 fn main() {
+   println!("Enter the number of years you want to convert: ");
 
-    loop {
+   let mut age = String::new(); 
+   io::stdin().read_line(&mut age).unwrap();
 
-    println!("Please input your age in years!");
+   let age: i32 = age.trim().parse().unwrap();
 
-    let mut guess = String::new();
-
-    
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Could not read age. Make you an integer is used.");
-        
-        let guess: u32 =  match guess.trim().parse() {
-            Ok(num) => num, 
-            Err(_) => continue,
-        };
-
-        let age: u32 = guess * 365;
-
-        println!("You are roughly {age} days old!")
-
-    }
+   println!("The age in days is {}", age * 365 + (age / 4));
 
 }
