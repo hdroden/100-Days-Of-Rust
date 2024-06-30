@@ -19,6 +19,14 @@ impl Tree {
     fn new_str(&mut self, input: String) {
         self.out_str = input;
     }
+    fn search_below() {
+        // Trying to do something with returning an array of letters to be sorted through
+        // The struct is neccessary (?) because 9 has 4 values and this lets us be opptional
+        // we need a way to update the string for each go around on the letters
+        // Start by checking if the next tree is None
+        // if true: return out_str + let 1 - 4
+        // if false out string of next is lets of this 1-4
+    }
 }
 
 fn map_numbers(input: String) -> Letter {
@@ -104,5 +112,12 @@ fn build_tree(input: String) -> Tree {
             next: Some(build_tree(String::from(chars.as_str()))),
         };
     }
+}
+
+fn parse_input(input: String) -> Vec<String> {
+    let mut start_node = build_tree(input);
+    // need a way to update the string based upon each letter. this might be a net new string
+    // that is instantiated here and gradually built out from a for each loop on letters
+    // then go through nodes
 }
 //REMEBER TO PASS IN LENGHT -1 to avoid enter as the last character

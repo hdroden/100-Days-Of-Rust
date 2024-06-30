@@ -43,7 +43,9 @@ We encourage you to share your progress and ask questions in the Discussions sec
 [Awesome Rust](https://github.com/rust-unofficial/awesome-rust)
 
 Some days have been skipped to gain a better understanding of the language
+
 For Day 6: in order to find the upper bounds needed for how many inputs to check for we need to take the sqrt of an integer, however this is not a full feature yet and only a nightly feature. As a result the code does not compile.
+
 For Day 8: I created a recursive function of Nodes to build a tree in order to parse each number and perform a depth first search and return the correct results. However rust does not compile without known size tree lengths so I need to get to the box and RC chapters in the book to understand how to properly implement recursive data types
 
 # Project List
